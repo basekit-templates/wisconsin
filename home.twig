@@ -1,0 +1,27 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="row">
+    <header class="three columns">
+        {{widget('logo', 'WISCONSIN-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'WISCONSIN-bar', {"business": "<h1>WISCONSIN</h1>"})|raw}}
+        {{widget('image', 'menu-feature', { 'src': asset('images/menu-feature.png'), 'imageWidth': '100%'})|raw}}
+        <nav class="text-center">
+            {{widget('menusections', 'menusections1', {})|raw}}
+        </nav>
+    </header>
+
+    <div role ="main" class="nine columns">
+        {{widget('menu', 'menu1', {})|raw}}
+        <footer>
+            {{widget('content', 'footer-header', {content: '<h1>Contact Us</h1>', lines: 'all'})|raw}}
+            {{widget('companyaddress', 'footer-address', {})|raw}}
+            {{widget('clicktocall', 'footer-phone', {phoneText: '0800 123 123'})|raw}}
+        </footer>
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,146 @@
+{
+    "name":"Loch Tay",
+    "thumbnail":"sycamore.png",
+    "screenshot":"sycamore.png",
+    "tags": {
+    "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
+    "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
+    "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
+    },
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#FFFFFF",
+            "color2":"#f7f4e1",
+            "color3":"#faa833",
+            "color4":"#3c4a55",
+            "color5":"#75685b",
+            "color6":"#012228",
+            "color7":"#ffffff"
+        },
+        "Swatch 2": {
+            "color1":"#f7f4e1",
+            "color2":"#f7f4e1",
+            "color3":"#841c2f",
+            "color4":"#3c4a55",
+            "color5":"#3c4a55",
+            "color6":"#E77E7E",
+            "color7":"#ffffff"
+        },
+        "Swatch 3": {
+            "color1":"#f7f4e1",
+            "color2":"#f7f4e1",
+            "color3":"#E77E7E",
+            "color4":"#3c4a55",
+            "color5":"#3c4a55",
+            "color6":"#9bd6cf",
+            "color7":"#ffffff"
+        },
+        "Swatch 4": {
+            "color1":"#f7f4e1",
+            "color2":"#f7f4e1",
+            "color3":"#841c2f",
+            "color4":"#3c4a55",
+            "color5":"#3c4a55",
+            "color6":"#9bd6cf",
+            "color7":"#ffffff"
+        },
+        "Swatch 5": {
+            "color1":"#f7f4e1",
+            "color2":"#f7f4e1",
+            "color3":"#841c2f",
+            "color4":"#3c4a55",
+            "color5":"#3c4a55",
+            "color6":"#9bd6cf",
+            "color7":"#ffffff"
+        }
+    },
+    "fontSwatch": {
+       "title": "Futura",
+        "font1": {
+            "font-family": "\"Oswald\", Arial, sans-serif",
+            "font-size": "30px",
+            "font-weight": "300",
+            "line-height": "42px",
+            "color": "@color-swatch3",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-size": "24px",
+            "font-weight": "400",
+            "line-height": "34px",
+            "color": "@color-swatch3",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-size": "16px",
+            "font-weight": "600",
+            "line-height": "24px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch3",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Oswald\", Arial, sans-serif",
+            "font-size": "15px",
+            "font-weight": "300",
+            "line-height": "26px",
+            "color": "@color-swatch5",
+            "color-hover": "@color-swatch5",
+            "letter-spacing": "4px",
+            "background-color": "transparent",
+            "background-color-hover": "transparent"
+        },
+        "font7": {
+            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit",
+            "background-color": "transparent",
+            "background-color-hover": "darken(@color-swatch1,5%)"
+        },
+        "font8": {
+            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Oswald\", Arial, sans-serif",
+            "font-size": "22px",
+            "font-weight": "100",
+            "line-height": "42px",
+            "color": "@color-swatch7",
+            "letter-spacing": "7px"
+        }
+    }
+}
