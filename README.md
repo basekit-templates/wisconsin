@@ -1,3 +1,5 @@
 
-Loch Tay
+Wisconsin
 ========
+
+Wisconsin menu template
