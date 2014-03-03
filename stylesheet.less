@@ -18,7 +18,7 @@ Table of Contents -
 @import "@{templateCommon}/basekit-bootstrap.less";
 
 body {
-    background-color: grey;
+    background-color: @color-swatch2;
     background-image: image('/images/white_wall.png');
     font-family:@font-swatch5-font-family;
     margin: 0;
@@ -47,7 +47,7 @@ h5 {
    =============================== */
 
 @desktop: ~"only screen and (max-width: 1024px)";
-@tablet: ~"only screen and (max-width: 768px)";
+@tablet: ~"only screen and (max-width: 800px)";
 @mobile: ~"only screen and (max-width: 640px)";
 
 /* ===============================
@@ -83,7 +83,7 @@ h5 {
     width: 25%; 
     padding-left: 0;
     padding-right: 0;
-    @media @desktop {
+    @media @tablet {
         width: 100%;
         &:after {
             position: relative;
@@ -100,7 +100,7 @@ h5 {
         content: "";
         width: 100%;
     }
-    @media @desktop {
+    @media @tablet {
         width: 100%;
     }
 }
@@ -125,16 +125,18 @@ h5 {
 .bk-header {
     background-color: @color-swatch6;
     height: 100%;
+    overflow-x: scroll;
     padding: 2em 0;
     position: fixed;
     text-align: center;
-    min-width: 245px;
+    min-width: 200px;
     width: 25%;
     z-index: 9999;
-    @media @desktop {
+    @media @tablet {
         padding-bottom: 0;
         position: relative;
         min-width: 100%;
+        overflow-x: visible;
         width: 100%;
     }
     .companyname {
@@ -161,21 +163,20 @@ h5 {
 nav {
     .widget {
         &.extendednavigation {
-            @media @desktop {
+            @media @tablet {
                 display: block;
                 float: left;
-                width: 100%;
-            }
-            @media @desktop {
                 margin: 0;
+                width: 100%;
             }
         }
         .extendednavigation {
             position: relative;
             max-width: 100%;
             margin: 2.5em 0 1em;
+            min-height: 60px;
             z-index: 99999;
-            @media @desktop {
+            @media @tablet {
                 background-color: none;
                 border: none;
                 margin: 0;
@@ -191,13 +192,13 @@ nav {
                 text-align: left;
                 padding: 0;
                 width: 100%;
-                @media @desktop {
+                @media @tablet {
                     /* Hidden until nav icon is clicked */
                     display: none;
                     /* Then these styles are applied */
                     width: 100%;
                     background-color: lighten(@color-swatch5, 10%);
-                    border: 1px solid @color-swatch5;
+                    border-bottom: 1px solid fade(@color-swatch7, 10%);
                     margin: 0;
                     padding: 60px 0 0;
                 }
@@ -207,16 +208,15 @@ nav {
                     padding: 0;
                     width: 100%;
                     text-align: center;
-                    @media @desktop {
+                    @media @tablet {
                         background-color: @color-swatch6;
                         color: @color-swatch7;
                         width: 100%;
                         padding: 0;
-                        border: 1px solid fade(@color-swatch5, 35%);
-                        border-bottom: 1px dotted fade(@color-swatch5, 35%);
+                        border-bottom: 1px solid fade(@color-swatch7, 5%);
                     }
                     &:last-child {
-                        @media @desktop {
+                        @media @tablet {
                             border-bottom: 1px solid fade(@color-swatch5, 25%);
                         }
                     }
@@ -232,7 +232,7 @@ nav {
                             padding: 0;
                             margin: 10px 0 0 0;
                             width: 100%;
-                            @media @desktop {
+                            @media @tablet {
                                 color: @color-swatch5;
                             }
                             li {
@@ -287,17 +287,16 @@ nav {
                                 color: @color-swatch1;
                                 text-decoration: none;
                             }
-                            @media @desktop {
-                                color: @color-swatch1;
+                            @media @tablet {
                                 margin-right: 0;
                             }
                         }
                         &:after {
                                 font-size: 9px;
-                                top: 50%;
+                                position: absolute;
+                                top: 28px;
                                 z-index: 9999999;
-                                right: 48px;
-                                border: 5px solid transparent;
+                                right: 30px;
                                 border-top-color: fade(@color-swatch7, 30%);
                                 @media @tablet {
                                     font-size: 10px;
@@ -305,13 +304,12 @@ nav {
                                 }
                             }
                         ul {
-                            border: 1px solid darken(@color-swatch4, 5%);
+                            border: none;
                             padding: 0;
                             position: relative;
                             margin-top: 0;
                             @media @tablet {
                                 background-color: @color-swatch4;
-                                margin-top: 15px;
                                 left: 0;
                             }
                             li {
@@ -319,11 +317,7 @@ nav {
                                 border-right: none;
                                 border-left: none;
                                 border-top: 1px solid darken(@color-swatch4, 5%);
-                                border-bototm: 1px solid darken(@color-swatch4, 5%);
                                 margin-right: 0;
-                                &:hover {
-                                    background: darken(@color-swatch4, 2%);
-                                }
                                 a {
                                     &:hover {
                                         color: @color-swatch1;
@@ -346,7 +340,7 @@ nav {
                &.pull {
                    display: none;
                    min-height: 60px;
-                   @media @desktop {
+                   @media @tablet {
                        background-color: @color-swatch5;
                        display: block;
                        margin: 0 auto;
@@ -359,7 +353,7 @@ nav {
                         }
                         &:after {
                             background: @color-swatch1;
-                            box-shadow: 0 6px 0 white, 0 12px 0 white;
+                            box-shadow: 0 6px 0 @color-swatch7, 0 12px 0 @color-swatch7;
                             color: @color-swatch1;
                             content :"";
                             position: absolute;
@@ -391,7 +385,7 @@ nav {
         li {
             padding: 0.8em 0;
             margin: 0;
-            @media @desktop {
+            @media @tablet {
                 padding: 1.25em 0 1em;
                 border-bottom: 1px solid fade(@color-swatch5, 25%);
                 width: 100%;
@@ -399,7 +393,7 @@ nav {
             }
             &:first-child a {
                 padding-left: 0;
-                @media @desktop {
+                @media @tablet {
                     padding: 0;
                 }
             }
@@ -422,10 +416,8 @@ nav {
         &.menu-pull {
             display: none;
             color: @color-swatch7;
-            @media @desktop {
-                display: block;
-                line-height: 65px;
-                width: 100%;
+            min-height: 60px;
+            @media @tablet {
                 &:after {
                     display: block;
                     font-family: @font-swatch4-font-family;
@@ -501,6 +493,7 @@ div[role="main"] {
                     border: none;
                 }
                 .menu-subsection-header {
+                    text-align: center;
                     @media only screen and (max-width: 550px) {
                         border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
                         padding-bottom: 1.5em;
@@ -512,13 +505,12 @@ div[role="main"] {
                 .menu-items { /* ol */
                     display: block;
                     position: relative;
-                    column-count: 3;
-                    column-gap: 50px;
-                   -moz-column-count: 3;
-                   -moz-column-gap: 50px;
-                   -webkit-column-count: 3;
-                   -webkit-column-gap : 50px;
-                    @media @mobile { 
+                    @media @desktop { 
+                        column-count: 2;
+                       -moz-column-count: 2;
+                       -webkit-column-count: 2;
+                    }
+                    @media @mobile {
                         column-count: 1;
                        -moz-column-count: 1;
                        -webkit-column-count: 1;
@@ -527,7 +519,7 @@ div[role="main"] {
                         position: relative;
                         display: inline-block;
                         &.menu-item-promoted { /* menu-item-promoted */
-                            background-color: fade(@color-swatch5, 10%);
+                            background-color: fade(@color-swatch5, 8%);
                             border-radius: 6px;
                             -moz-border-radius: 6px;
                             -webkit-border-radius: 6px;
@@ -595,7 +587,7 @@ div[role="main"] {
                                 font-size: bkscale(@font-swatch5-font-size, 0.88);
                                 font-weight: @font-swatch5-font-weight;
                                 line-height:@font-swatch5-line-height;
-                                color: @font-swatch5-color;
+                                color: fade(@font-swatch5-color, 65%);
                                 letter-spacing: @font-swatch5-letter-spacing;
                                 font-style: italic;
                                 float: left;
@@ -607,7 +599,7 @@ div[role="main"] {
                                 font-size: bkscale(@font-swatch5-font-size, 0.85);
                                 font-weight: @font-swatch5-font-weight;
                                 line-height: @font-swatch5-line-height;
-                                color: @font-swatch5-color;
+                                color: fade(@font-swatch5-color, 65%);
                                 font-style: italic;
                                 float: left;
                                 width: 100%;
@@ -621,12 +613,11 @@ div[role="main"] {
                                 float: left;
                                 font-size: bkscale(@font-swatch5-font-size, 0.9);
                                 .dietary-icon {
-                                    background-color: @color-swatch7;
-                                    border: 1px solid fade(@color-swatch6, 75%);
+                                    background-color: none;
+                                    border: 1px solid fade(@color-swatch5, 25%);
                                     margin: 5px 5px 0 0;
                                     padding: 2px 8px;
                                     border-radius: 5px;
-                                    border-color: lighten(@color-swatch5, 30%);
                                 }
                                 .not-spicy-icon.dietary-icon {
                                     display: none;
@@ -695,11 +686,11 @@ div[role="main"] {
                 } /* end PROMOTED SUB-SECTION */
 
                 .menu-info {
-                    border: 2px solid fade(@color-swatch5, 25%);
+                    border: 2px solid fade(@color-swatch5, 8%);
                     display: block;
                     float: left;
                     text-align: center;
-                    margin: 2.5em 0;
+                    margin: 1.5em 0 3em;
                     padding: 20px;
                     width: 100%;
                     p {    /* menu-note */
@@ -769,8 +760,13 @@ div[role="main"] {
         margin: 0.5em 0;
         a {
             @media @tablet {
-                background-color: fade(@color-swatch4, 65%);
+                background-color: @color-swatch3;
                 color: @color-swatch7;
+            }
+            &:hover {
+                @media @tablet {
+                    background-color: darken(@color-swatch3, 5%);
+                }
             }
         }
     }
@@ -985,6 +981,7 @@ hr.line {
 
 .widget {
     &.contactform fieldset button.btn, &.dropbox button, &.paypalbuynow .widget.button.paypal, &.signupform button.btn {
+        border: none;
         color: @color-swatch1;
     }
     .clicktocall {
@@ -1000,7 +997,6 @@ hr.line {
 
 input, textarea {
     background: white;
-    border: 1px solid fade(@color-swatch5, 40%) !important;
     color: #2d2d2d;
 }
 
