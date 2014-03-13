@@ -983,7 +983,7 @@ hr.line {
 .widget {
     &.contactform fieldset button.btn, &.dropbox button, &.paypalbuynow .widget.button.paypal, &.signupform button.btn {
         border: none;
-        color: @color-swatch7;
+        color: @font-swatch7-color;
     }
     .clicktocall {
         &:hover {
@@ -1009,8 +1009,11 @@ button, .widget.button.paypal, .widget.tweet a {
     -webkit-font-smoothing: antialiased !important;
 }
 
-.signupform fieldset button, fieldset button, fieldset input {
+.signupform fieldset button, fieldset button {
     height: 45px;
+}
+
+.signupform fieldset input {
     width: 70%;
 }
 
