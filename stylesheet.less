@@ -542,8 +542,8 @@ div[role="main"] {
 
                         .inner-item {
                             display:block;
-                            padding-bottom: 2em;
-                            margin-bottom: 2.5em;
+                            padding-bottom: 1em;
+                            margin-bottom: 1em;
                             width: 100%;
                             h3 {    /* menu-item-name */  
                                 padding: 0 0 0.15em;
@@ -980,7 +980,7 @@ hr.line {
 .widget {
     &.contactform fieldset button.btn, &.dropbox button, &.paypalbuynow .widget.button.paypal, &.signupform button.btn {
         border: none;
-        color: @color-swatch1;
+        color: @font-swatch7-color;
     }
     .clicktocall {
         &:hover {
@@ -1010,6 +1010,53 @@ button, .widget.button.paypal, .widget.tweet a {
     height: 45px;
 }
 
+.signupform fieldset input {
+    width: 70%;
+}
+
 .widget.profile form button {
     padding-top: 8px;
+}
+
+/* ===============================
+   PRINT STYLES 
+   =============================== */
+.print-mixin {
+    .three, .row .three {
+	    width: 100%;
+	    .widget.image {
+		    display: none;
+	    }
+    }
+    [class*="col"] + [class*="col"]:last-child {
+	    float: none;
+    }
+    .nine, .row .nine {
+	    width: 100%;
+    }
+    .menu-subsection-promoted,
+    .menu-item-promoted {
+	    border: 1px solid #b9b9b9 !important;
+    }
+    .bk-header {
+	    width: 100%;
+	    position: relative;
+    }
+    .nine.cols {
+	    margin: 0 auto;
+    }
+    div[role="main"] .widget.menu .main .menu-subsection .menu-subsection-promoted:before {
+	    display: none;
+    }
+}
+ 
+@media print {
+	body {
+		border: none !important;
+	}
+    .print-mixin;
+}
+ 
+.bk-print {
+    .print-mixin;
 }
